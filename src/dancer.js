@@ -4,18 +4,13 @@ var makeDancer = function (top, left, timeBetweenSteps) {
 
   // use jQuery to create an HTML <span> tag
   this.$node = $('<span class="dancer"></span>');
-
-  // uncertain how to invoke within class
-  console.log(this);
+  this.timeBetweenSteps = timeBetweenSteps;
   this.step();
-
-  // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
-  // this one sets the position to some random default point within the body
   this.setPosition(top, left);
 };
 
 makeDancer.prototype.step = function () {
-  setTimeout(this.step.bind(this), timeBetweenSteps);
+  setTimeout(this.step.bind(this), this.timeBetweenSteps);
 }
 
 makeDancer.prototype.setPosition = function (top, left) {
@@ -26,6 +21,9 @@ makeDancer.prototype.setPosition = function (top, left) {
   this.$node.css(styleSettings);
 }
 
+// we make a variable makeDancer that contains a class for Dancer, but also invokes two methods at call time, step and set position
+// this.node is the tag/element that makeDancer is, which is a span (one line), with a class of "dancer"
+// we invoke step and set position
+// step - will run step once every "this.timeBetweenSteps"
+  //
 
-
-// makeDancer(top, left, 1000).prototype.step();
