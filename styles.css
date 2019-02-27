@@ -1,5 +1,9 @@
 body, html{
   height:100%;
+  background-image: url(bikinibottom.jpg);
+  background-size: cover;
+  background-repeat: no repeat;
+  background-position: center center;
 }
 body{
   margin: 0px;
@@ -24,4 +28,17 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+.spongebob {
+  content:url(spongebob.gif); /* double check if this is the right file*/
+  height: 150px;
+  width: 225px;
+  position: absolute;
+}
+
+.squidward {
+  content:url(squidward.webp);
+  height: 125px;
+  width: 125px;
+  position: absolute;
 }
