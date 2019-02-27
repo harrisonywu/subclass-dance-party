@@ -7,7 +7,6 @@ makeSquidward.prototype = Object.create(makeDancer.prototype);
 makeSquidward.prototype.constructor = makeSquidward;
 
 makeSquidward.prototype.step = function () {
-
   makeDancer.prototype.step.call(this);
-
 };
+
